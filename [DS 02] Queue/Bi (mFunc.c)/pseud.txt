@@ -1,0 +1,101 @@
+
+//incluyendo a las funciones de bicola
+Funcion  ingresarFrente ( COLA c, tipoDato a)
+	si colaLlena Entonces
+		imprimir "no"
+	Sino
+		c->frente = (c->frente==0) ? c->frente+(TAM-1) : (c->frente-1)%TAM
+	FinSi
+	
+Fin Funcion
+
+Funcion ingresarFinal ( COLA c, tipoDato a )
+	si colaLlena entonces
+		imprimir "no"
+	sino
+		c->fin = (c->final+1)%TAM
+    	c->CListaCola[c->final] = a	
+	FinSi
+Fin Funcion
+
+Funcion eliminarFrente ( COLA* c )
+	si colaVacia Entonces
+		imprimir "no"
+	sino
+		c->frente = (c->frente+1%TAM)
+	FinSi
+Fin Funcion
+
+Funcion eliminarFinal ( COLA* c )
+	si colaVacía Entonces
+		imprimir "no"
+	Sino
+		c->final = (c->final==0) ? c->final+(TAM-1) : (c->final-1)%TAM
+	FinSi
+Fin Funcion
+
+Funcion td <- leerFrente ( COLA* c )
+	td = c->clistaCola[c->frente]
+Fin Funcion
+
+Funcion td <- leerFinal ( COLA *c )
+	td = c->clistaCola[c->final]
+Fin Funcion
+
+Funcion imprimirC ( COLA* c )
+	i=c->frente
+	Si !colaVacía(*c) entonces
+		mientras i<>c->final
+			imprimir c->clistaCola[i]
+			si i>=TAM-1 Entonces
+				i=0
+			Sino
+				i++;
+			FinSi
+		FinMientras
+		imprimir leerFinal(c)
+	FinSi
+Fin Funcion
+
+Funcion tipoDato <- getValue (  )
+	Imprimir "mete el valor"
+	leer tipoDato n
+Fin Funcion
+
+Funcion printMenu (  )
+	imprimir "1. ingresar frente"
+	imprimir "2. ingresar final"
+	imprimir "3. eliminar frente"
+	imprimir "4. eliminar final"
+	imprimir "5. leer elemento del frente"
+	imprimir "6. leer elemento del final"
+	imprimir "7. imprimir"
+	imprimir "8. salir"
+Fin Funcion
+
+Algoritmo bicolaImplementación
+	Hacer
+		printMenu()
+		cont = getValue()
+		COLA c
+		crearCola(&c)
+		Segun cont Hacer
+			1:
+				ingresarFrente(&c, getValue())
+			2:
+				ingresarFinal(&c, getValue())
+			3:
+				eliminarFrente(&c)
+			4:
+				eliminarFinal(&c)
+			5:
+				imprimir leerFrente(&c)
+			6:
+				imprimir leerFinal(&c)
+			7:
+				imprimirC(&c)
+		Fin Segun
+	Hasta Que cont<>8 
+FinAlgoritmo
+
+

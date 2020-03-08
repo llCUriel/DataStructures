@@ -1,0 +1,24 @@
+
+/*
+	INSTITUTO POLITÉCNICO NACIONAL
+	ESCUELA SUPERIOR DE CÓMPUTO
+	ESTRUCTURAS DE DATOS
+	GRUPO: 1CV7
+	ALUMNOS: 
+		HERNÁNDEZ CASTELLANOS CÉSAR URIEL
+		MARTÍNEZ ISLAS MAURICO JOEL
+	PROFESOR: BENJAMÍN LUNA BENOSO 
+
+	ARCHIVO DE CABECERA DE PROBLEMA DE JOSEPHUS
+	
+	FECHA: 22/4/17
+*/
+#include <time.h>
+#include <stdlib.h>
+#include "LCSE.c"
+
+char josephus();
+void printSoldiers(NODO* cab);
+NODO* initList(int ns);
+int getSoldiers();
+int getN();

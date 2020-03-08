@@ -1,0 +1,24 @@
+/*
+	INSTITUTO POLITÉCNICO NACIONAL
+	ESCUELA SUPERIOR DE CÓMPUTO
+	ESTRUCTURAS DE DATOS
+	GRUPO: 1CV7
+	ALUMNOS (NO AUTORES DE ESTE CODIGO): 
+		HERNÁNDEZ CASTELLANOS CÉSAR URIEL
+		MARTÍNEZ ISLAS MAURICO JOEL
+	PROFESOR: BENJAMÍN LUNA BENOSO 
+
+	ARCHIVO DE CABECERA DEL TDA LCSE
+	
+	FECHA: 22/4/17
+*/
+#include <stdio.h>
+
+typedef char ITEM;
+typedef struct nodo{
+	ITEM dato;
+	struct nodo* sig;
+} NODO;
+NODO* crearNodo(ITEM x);
+void ingresarCabLCSE(NODO** cab, ITEM x);
+void eliminarLCSE(NODO** cab, ITEM x);

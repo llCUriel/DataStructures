@@ -1,0 +1,18 @@
+/*
+	INSTITUTO POLITÉCNICO NACIONAL
+	ESCUELA SUPERIOR DE CÓMPUTO
+	ESTRUCTURAS DE DATOS
+	GRUPO: 1CV7
+	ALUMNOS: 
+		HERNÁNDEZ CASTELLANOS CÉSAR URIEL
+		MARTÍNEZ ISLAS MAURICO JOEL
+	PROFESOR: BENJAMÍN LUNA BENOSO 
+	ARCHIVO DE CABECERA DE ROUND ROBIN
+	FECHA: 6/3/17
+*/
+#include "Cola.c"
+void print(COLA c);
+int assignQuantum();
+int readInput(); 
+void assignMem(COLA* c, int size);
+void run(COLA* c, int quant);

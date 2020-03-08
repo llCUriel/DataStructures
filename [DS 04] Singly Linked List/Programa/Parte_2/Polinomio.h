@@ -1,0 +1,25 @@
+/*
+INSTITUTO POLITÉCNICO NACIONAL
+ESCUELA SUPERIOR DE CÓMPUTO
+ESTRUCTURAS DE DATOS
+GRUPO: 1CV7
+ALUMNOS: 
+	HERNANDEZ CASTELLANOS CESAR URIEL
+	MARTINEZ ISLAS MAURICIO JOEL
+PROFESOR: BENJAMÍN LUNA BENOSO
+
+ARCHIVO DE CABECERA PARA POLINOMIO.C
+
+FECHA: 5/4/17
+*/
+#include "LSE.c"
+void inputPoly(NODO** cab);
+void printPoly(NODO* cab);
+NODO* polyInt(NODO* cab);
+NODO* polyDeriv(NODO* cab);
+NODO* addPoly(NODO* cab1, NODO* cab2);
+NODO* copyPoly(NODO* cab);
+NODO* simpPoly(NODO* cab);
+NODO* multPoli(NODO* cab1, NODO* cab2);
+void bubbleSortPoly(NODO** cab);
+void runMenu();

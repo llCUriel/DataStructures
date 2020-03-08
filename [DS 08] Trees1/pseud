@@ -1,0 +1,29 @@
+void rutasRaizHoja(Nodo* arbol, Pila p):
+	Insertar arbol->valor en pila
+	rutasRaizHoja(arbol->izq, p)
+	Si arbol es hoja:
+		imprimir pila
+	rutasRaizHoja(arbol->der, p)
+
+Arbol* entradaArbExpresion(char* inString):
+	*arbol = *raiz = NULL
+	Para i en inString:
+		Si inString[i] == '(':
+			Si !arbol:
+				arbol = crear nodo nuevo vacío
+				raiz = arbol
+			Si no:
+				Si !arbol->izq:
+					arbol = arbol->izq = crearNodo(' ', arbol)
+				Si no:
+					arbol = arbol->der = crearNodo(' ', arbol)
+		Si entonces inString[i] == ')':
+			arbol = arbol->padre
+		Si entonces inString [i] == algun operador:
+			arbol->valor = inString[i]
+		Si no:
+			Si !arbol->izq
+				arbol->izq = crearNodo(inString[i], arbol)
+			Si arbol->der
+				arbol->der = crearNodo(inString[i], arbol)
+

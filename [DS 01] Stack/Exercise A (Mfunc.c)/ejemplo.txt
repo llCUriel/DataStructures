@@ -1,0 +1,9 @@
+([{{}}()()()]){{{
+
+
+[asdfghj]
+
+
+{aqui diria que falta una llave aqui, por que es la linea del ultimo simbolo en la pila
+
+}}}
